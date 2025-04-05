@@ -1,0 +1,151 @@
+/* style.css */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: linear-gradient(135deg, #f0f8ff, #fee1e1);
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.5s ease;
+  overflow: hidden;
+}
+
+.loading-content {
+  text-align: center;
+}
+
+.loading-logo {
+  width: 200px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.loading-text {
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.loading-bar {
+  width: 200px;
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 4px;
+  margin: 20px auto;
+}
+
+.loading-progress {
+  height: 100%;
+  width: 0;
+  background-color: #580000;
+  border-radius: 4px;
+  transition: width 0.3s linear;
+}
+
+.gallery-detail-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.gallery-detail-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.gallery-detail-date {
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+.gallery-detail-images {
+  margin-bottom: 2rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-detail-carousel {
+  display: flex;
+  width: 100%;
+}
+
+.gallery-detail-image {
+  width: 100%;
+  height: auto;
+  display: none;
+  transition: opacity 0.3s ease;
+  border-radius: 10px; /* Add curved corners to images */
+  object-fit: cover; /* Optional: maintain aspect ratio and cover container */
+}
+
+.gallery-detail-image.active {
+  display: block;
+  opacity: 1;
+}
+
+.gallery-detail-description,
+.gallery-detail-additional {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.gallery-detail-back {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-detail-back:hover {
+  background-color: #555;
+}
+
+/* Slide Buttons */
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-button {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
+}
+
+.carousel-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.gallery-detail-image {
+  opacity: 0;
+}
