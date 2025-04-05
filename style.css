@@ -1,10 +1,12 @@
 /* style.css */
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
     background: linear-gradient(135deg, #f0f8ff, #fee1e1);
+    line-height: 1.6;
 }
 
 #loading-screen {
@@ -102,7 +104,7 @@ nav {
 }
 
 .nav-list li {
-    margin-left: 1.5rem; /* Reduced margin for better mobile view */
+    margin-left: 1.5rem;
 }
 
 .nav-list li a {
@@ -113,7 +115,7 @@ nav {
 }
 
 .nav-list li a:hover {
-    color: #580000;
+    color: #400000;
 }
 
 .mobile-nav-toggle {
@@ -131,7 +133,7 @@ nav {
     background-position: center;
     color: #fff;
     text-align: center;
-    padding: 8rem 0; /* Further reduced hero padding for mobile */
+    padding: 6rem 0;
     position: relative;
 }
 
@@ -151,13 +153,13 @@ nav {
 }
 
 .hero-content h2 {
-    font-size: 2.5rem; /* Reduced hero heading size for mobile */
+    font-size: 2.2rem;
     margin-bottom: 0.8rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .hero-content p {
-    font-size: 1.1rem; /* Reduced hero paragraph size for mobile */
+    font-size: 1rem;
     margin-bottom: 1.5rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
@@ -165,7 +167,7 @@ nav {
 .btn {
     background-color: #580000;
     color: #fff;
-    padding: 0.7rem 1.8rem; /* Further reduced button padding for mobile */
+    padding: 0.7rem 1.8rem;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
@@ -175,25 +177,23 @@ nav {
 }
 
 .btn:hover {
-    background-color: #580000;
-    transform: translateY(-2px); /* Reduced hover effect for mobile */
+    background-color: #400000;
+    transform: translateY(-2px);
 }
 
 .content-section {
-    padding: 3rem 1.5rem; /* Reduced content section padding for mobile */
+    padding: 3rem 1.5rem;
     text-align: center;
 }
 
 .content-section h2 {
-    margin-bottom: 1.8rem; /* Reduced content section heading margin for mobile */
+    margin-bottom: 1.8rem;
     color: #580000;
     font-weight: 600;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-/* style.css (or a separate event-details.css) */
-
-.event-schedule, .event-registration, .event-map, .event-contact {
+.event-schedule, .event-registration, .event-map, .event-contact, .event-details {
     padding: 2rem;
     max-width: 800px;
     margin: 2rem auto;
@@ -218,12 +218,6 @@ nav {
     border-radius: 8px;
 }
 
-.event-details {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 .event-details h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -232,7 +226,7 @@ nav {
 .event-details-image {
     width: 100%;
     height: auto;
-    max-height: 400px; /* Adjust as needed */
+    max-height: 400px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1.5rem;
@@ -243,20 +237,20 @@ nav {
 }
 
 .event-grid, .event-details {
-    transition: opacity 0.5s ease; /* Fade transition */
+    transition: opacity 0.5s ease;
 }
 
 .event-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Further adjusted event grid min width for mobile */
-    gap: 1.5rem; /* Further reduced event grid gap for mobile */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .event-item {
     background: #fff;
-    padding: 1.8rem; /* Further reduced event item padding for mobile */
+    padding: 1.8rem;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -264,13 +258,13 @@ nav {
 }
 
 .event-item:hover {
-    transform: translateY(-3px); /* Reduced hover effect for mobile */
+    transform: translateY(-3px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
 
 .event-image {
     width: 100%;
-    height: 250px; /* Further reduced event image height for mobile */
+    height: 250px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
@@ -278,29 +272,27 @@ nav {
 
 .event-item h3 {
     color: #fab1b1;
-    margin-bottom: 0.6rem; /* Further reduced event item heading margin for mobile */
-    font-size: 1.1rem; /* Reduced font size for mobile */
+    margin-bottom: 0.6rem;
+    font-size: 1.1rem;
 }
 
 .event-item p {
-    font-size: 0.95rem; /* Reduced font size for mobile */
+    font-size: 0.95rem;
 }
 
 .event-button {
     background-color: #580000;
     color: #fff;
     border: none;
-    padding: 8px 18px; /* Further reduced event button padding for mobile */
+    padding: 8px 18px;
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .event-button:hover {
-    background-color: #580000;
+    background-color: #400000;
 }
-
-/* style.css (Additions for Statistics Section with @media queries, without icons) */
 
 #statistics {
     background-color: #f9f9f9;
@@ -383,50 +375,11 @@ nav {
     color: #400000;
 }
 
-/* Media Queries for Responsiveness */
-
-@media (max-width: 768px) {
-    .statistics-container {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
-        gap: 1.5rem;
-    }
-
-    .stat-item {
-        padding: 1.5rem;
-    }
-
-    .stat-count {
-        font-size: 1.8rem;
-    }
-
-    .stat-item h3 {
-        font-size: 1.1rem;
-    }
-
-    #statistics h2 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    #statistics {
-        padding: 3rem 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .stat-count {
-        font-size: 1.6rem;
-    }
-
-    .stat-item h3 {
-        font-size: 1rem;
-    }
-}
-
 #gallery {
     padding: 4rem 0;
     background-color: #f4f4f4;
 }
+
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -435,6 +388,7 @@ nav {
     margin: 3rem auto;
     padding: 0 2rem;
 }
+
 .gallery-item {
     position: relative;
     overflow: hidden;
@@ -442,18 +396,22 @@ nav {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
 }
+
 .gallery-item:hover {
     transform: translateY(-8px);
 }
+
 .gallery-image-container {
     position: relative;
 }
+
 .gallery-carousel {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
 }
+
 .gallery-image {
     min-width: 100%;
     height: auto;
@@ -461,6 +419,7 @@ nav {
     scroll-snap-align: start;
     transition: opacity 0.3s ease;
 }
+
 .image-overlay {
     position: absolute;
     top: 0;
@@ -474,9 +433,11 @@ nav {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
 .gallery-item:hover .image-overlay {
     opacity: 1;
 }
+
 .view-details {
     color: #fff;
     text-decoration: none;
@@ -486,66 +447,81 @@ nav {
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 .view-details:hover {
     background-color: #fff;
     color: #333;
 }
+
 .gallery-details {
     padding: 2rem;
     background-color: #fff;
 }
+
 .gallery-details h3 {
     margin-bottom: 0.8rem;
     font-size: 1.4rem;
 }
+
 .gallery-details p {
     font-size: 1.1rem;
     line-height: 1.7;
 }
+
 .gallery-date {
     font-size: 1rem;
     margin-top: 0.8rem;
     color: #777;
 }
+
 .gallery-carousel::-webkit-scrollbar {
     display: none;
 }
+
 .gallery-carousel {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
 .gallery-detail-page {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
 }
+
 .gallery-detail-header {
     text-align: center;
     margin-bottom: 2rem;
 }
+
 .gallery-detail-date {
     color: #777;
     margin-top: 0.5rem;
 }
+
 .gallery-detail-images {
     margin-bottom: 2rem;
 }
+
 .gallery-detail-carousel {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
 }
+
 .gallery-detail-image {
     min-width: 100%;
     height: auto;
     display: block;
     scroll-snap-align: start;
 }
+
 .gallery-detail-description, .gallery-detail-additional {
     margin-bottom: 2rem;
     line-height: 1.6;
 }
+
 .gallery-detail-back {
     display: inline-block;
     padding: 1rem 2rem;
@@ -555,12 +531,15 @@ nav {
     border-radius: 8px;
     transition: background-color 0.3s ease;
 }
+
 .gallery-detail-back:hover {
     background-color: #555;
 }
+
 .gallery-detail-carousel::-webkit-scrollbar {
     display: none;
 }
+
 .gallery-detail-carousel {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -618,12 +597,12 @@ nav {
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 1rem;
-    width: 100%; /* Ensure full width on mobile */
-    box-sizing: border-box; /* Include padding and border in width */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #contact-form textarea {
-    resize: vertical; /* Allow vertical resizing of textarea */
+    resize: vertical;
     min-height: 150px;
 }
 
@@ -636,17 +615,13 @@ nav {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: fit-content; /* Adjust width to content */
-    margin: 0 auto; /* Center the button */
+    width: fit-content;
+    margin: 0 auto;
 }
 
 #contact-form button:hover {
-    background-color: #580000;
+    background-color: #400000;
 }
-
-/* style.css (Partial - Focus on Footer Social Icons) */
-
-/* style.css */
 
 footer {
     background-color: #f0f0f0;
@@ -676,7 +651,6 @@ footer {
     font-size: 1.2rem;
 }
 
-/* Specific styles for Facebook */
 .social-icon[aria-label="Facebook"] {
     background-color: #1877f2;
     color: #fff;
@@ -687,7 +661,6 @@ footer {
     transform: scale(1.1);
 }
 
-/* Specific styles for YouTube */
 .social-icon[aria-label="YouTube"] {
     background-color: #ff0000;
     color: #fff;
@@ -698,7 +671,6 @@ footer {
     transform: scale(1.1);
 }
 
-/* Specific styles for Twitter */
 .social-icon[aria-label="Twitter"] {
     background-color: #1da1f2;
     color: #fff;
@@ -709,7 +681,6 @@ footer {
     transform: scale(1.1);
 }
 
-/* Specific styles for Instagram */
 .social-icon[aria-label="Instagram"] {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     color: #fff;
@@ -719,7 +690,6 @@ footer {
     transform: scale(1.1);
 }
 
-/* Specific styles for LinkedIn */
 .social-icon[aria-label="LinkedIn"] {
     background-color: #0077b5;
     color: #fff;
@@ -732,4 +702,154 @@ footer {
 
 footer p {
     font-size: 0.9rem;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-list li {
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    .hero {
+        padding: 4rem 0;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 0.6rem 1.5rem;
+    }
+
+    .content-section {
+        padding: 2rem 1rem;
+    }
+
+    .content-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .event-item {
+        padding: 1.5rem;
+    }
+
+    .event-image {
+        height: 200px;
+    }
+
+    .event-item h3 {
+        font-size: 1rem;
+    }
+
+    .event-item p {
+        font-size: 0.9rem;
+    }
+
+    .event-button {
+        padding: 0.5rem 1.2rem;
+    }
+
+    #statistics {
+        padding: 3rem 1rem;
+    }
+
+    .statistics-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .stat-item {
+        padding: 1.5rem;
+    }
+
+    .stat-count {
+        font-size: 1.8rem;
+    }
+
+    .stat-item h3 {
+        font-size: 1.1rem;
+    }
+
+    #statistics h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+
+    .gallery-details {
+        padding: 1.5rem;
+    }
+
+    .gallery-details h3 {
+        font-size: 1.2rem;
+    }
+
+    .gallery-details p {
+        font-size: 1rem;
+    }
+
+    .gallery-detail-page {
+        padding: 1rem;
+    }
+
+    #contact {
+        padding: 3rem 1rem;
+    }
+
+    #contact-form {
+        gap: 1rem;
+    }
+
+    #contact-form button {
+        padding: 0.8rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-count {
+        font-size: 1.6rem;
+    }
+
+    .stat-item h3 {
+        font-size: 1rem;
+    }
 }
