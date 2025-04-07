@@ -201,7 +201,7 @@ document.getElementById('whatsapp-link').addEventListener('click', function(even
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
 
-    const whatsappNumber = '+94760149857'; // Replace with your WhatsApp number (with country code)
+    const whatsappNumber = '+94761544734'; // Replace with your WhatsApp number (with country code)
     const encodedMessage = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
 
     const whatsappLink = `https://wa.me/<span class="math-inline">\{whatsappNumber\}?text\=</span>{encodedMessage}`;
