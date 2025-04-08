@@ -62,29 +62,6 @@ body {
     transition: width 0.3s linear;
 }
 
-/* Keyframes for floating animation */
-@keyframes floatMainText {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-8px); /* Adjust floating height */
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Apply floating animation to main headings */
-h1.logo, .hero h2 {
-    animation: floatMainText 3s infinite ease-in-out; /* Adjust duration and easing */
-}
-
-/* Apply floating animation to main paragraph in hero */
-.hero p {
-    animation: floatMainText 3.5s infinite ease-in-out; /* Slightly different timing */
-}
-
 header {
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(15px);
