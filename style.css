@@ -623,6 +623,35 @@ nav {
     background-color: #400000;
 }
 
+#vision.section {
+    background-color: #222; /* Optional: Add a background color for better visual separation */
+}
+
+#vision .container {
+    padding: 80px 20px; /* Adjust padding as needed */
+    text-align: center; /* Center the content within the container */
+}
+
+#vision h2 {
+    color: white; /* Ensure heading text is visible */
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+#vision p {
+    color: #ddd; /* Style the paragraph text */
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Add more specific styling if needed, for example, to control the width of the text block */
+#vision .container p {
+    max-width: 800px; /* Limit the width of the paragraph for better readability */
+    margin-left: auto;
+    margin-right: auto;
+}
+
 footer {
     background-color: #f0f0f0;
     color: #333;
