@@ -62,6 +62,56 @@ body {
     transition: width 0.3s linear;
 }
 
+/* Keyframes for floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust the floating height */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Apply floating animation to headings */
+h1, h2, h3 {
+    animation: float 3s infinite ease-in-out; /* Adjust duration and easing */
+}
+
+/* Apply a slightly different animation to paragraphs */
+p {
+    animation: float 4s infinite ease-in-out; /* Different speed for variation */
+}
+
+/* Apply animation to navigation links */
+header nav ul li a {
+    animation: float 2.5s infinite ease-in-out; /* Faster animation */
+}
+
+/* Apply animation to the hero section text */
+.hero h2, .hero p, .hero .btn {
+    animation: float 3.5s infinite ease-in-out; /* Another variation */
+}
+
+/* Apply animation to button text */
+.btn {
+    animation: float 3s infinite ease-in-out;
+}
+
+/* Apply animation to mobile navigation links */
+.mobile-nav ul li a {
+    animation: float 2.8s infinite ease-in-out;
+}
+
+/* You might want to exclude the footer text */
+footer p {
+    animation: none; /* Disable animation for footer */
+}
+
+/* Adjust or add more specific rules as needed for other text elements */
+
 header {
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(15px);
