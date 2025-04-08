@@ -624,32 +624,36 @@ nav {
 }
 
 #vision.section {
-    background-color: #222; /* Optional: Add a background color for better visual separation */
+    background-color: #222; /* Optional: Add a background color */
+    display: flex; /* Enable flexbox for vertical centering */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content (optional, if you want the whole block centered) */
+    padding: 80px 20px; /* Adjust padding as needed */
+    text-align: center; /* Center the text within the container */
 }
 
 #vision .container {
-    padding: 80px 20px; /* Adjust padding as needed */
-    text-align: center; /* Center the content within the container */
+    /* Remove text-align: center here if you want more control */
+    max-width: 800px; /* Limit the width for better readability */
+    width: 100%; /* Ensure it takes full width within the flex container */
 }
 
 #vision h2 {
-    color: white; /* Ensure heading text is visible */
+    color: white;
     font-size: 2.5em;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 #vision p {
-    color: #ddd; /* Style the paragraph text */
+    color: #ddd;
     font-size: 1.1em;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-/* Add more specific styling if needed, for example, to control the width of the text block */
+/* If you only want the text centered within its own block: */
 #vision .container p {
-    max-width: 800px; /* Limit the width of the paragraph for better readability */
-    margin-left: auto;
-    margin-right: auto;
+    text-align: center; /* Center the paragraph text */
 }
 
 footer {
