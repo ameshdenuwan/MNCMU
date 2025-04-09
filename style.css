@@ -571,7 +571,7 @@ nav {
 }
 
 #Vision.section {
-    background-color: #000; /* Black background */
+    background-color: #ffffff; /* Black background */
     display: flex;
     flex-direction: column; /* Stack vision and mission vertically */
     align-items: center; /* Center content horizontally */
@@ -592,7 +592,7 @@ nav {
 }
 
 #Vision h2 {
-    color: #a70000; /* Accent color for headings */
+    color: #300000; /* Accent color for headings */
     font-size: 2.5em;
     margin-bottom: 20px;
     animation: float 3s ease-in-out infinite, fadeIn 1s ease-out; /* Floating and fade-in */
