@@ -571,7 +571,7 @@ nav {
 }
 
 #Vision.section {
-    background-color: #ffffff; /* Black background */
+    background-color: #ffc7c7; /* Black background */
     display: flex;
     flex-direction: column; /* Stack vision and mission vertically */
     align-items: center; /* Center content horizontally */
@@ -599,7 +599,7 @@ nav {
 }
 
 #Vision p {
-    color: #ddd;
+    color: #1f1e1e;
     font-size: 1.1em;
     line-height: 1.6;
     margin-bottom: 20px;
