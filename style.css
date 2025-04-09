@@ -570,6 +570,53 @@ nav {
     border-radius: 8px;
 }
 
+#Vision.section {
+    background-color: #000; /* Black background */
+    display: flex;
+    flex-direction: column; /* Stack vision and mission vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    padding: 80px 20px;
+    text-align: center;
+    color: #f0f0f0; /* Light text color */
+}
+
+#Vision .container {
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 40px; /* Add spacing between Vision and Mission containers */
+}
+
+#Vision .container:last-child {
+    margin-bottom: 0; /* Remove bottom margin for the last container */
+}
+
+#Vision h2 {
+    color: #a70000; /* Accent color for headings */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite, fadeIn 1s ease-out; /* Floating and fade-in */
+}
+
+#Vision p {
+    color: #ddd;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out 0.5s infinite, fadeIn 1s ease-out 0.5s; /* Floating with delay and fade-in */
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 #contact {
     background-color: #f9f9f9;
     padding: 4rem 2rem;
