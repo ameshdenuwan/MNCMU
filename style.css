@@ -127,6 +127,126 @@ nav {
     cursor: pointer;
 }
 
+#primary-navigation {
+    position: fixed; /* Fixed position to slide from the side */
+    top: 0;
+    left: -100%; /* Initially hidden off-screen */
+    width: 80%; /* Adjust width as needed */
+    max-width: 300px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95); /* Dark background for the sidebar */
+    backdrop-filter: blur(10px); /* Optional blur effect */
+    z-index: 1001; /* Higher than other content */
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px; /* Adjust for header height */
+    transition: left 0.3s ease-in-out; /* Smooth slide animation */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+#primary-navigation[data-visible="true"] {
+    left: 0; /* Slide in when data-visible is true */
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    align-items: stretch; /* Make links take full width */
+}
+
+.nav-list li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle divider */
+}
+
+.nav-list li:last-child {
+    border-bottom: none; /* Remove divider from the last item */
+}
+
+.nav-list li a {
+    display: block; /* Make the entire link clickable */
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    background-color: rgba(255, 255, 255, 0.05); /* Darker hover effect */
+}
+
+.mobile-nav-toggle {
+    display: none; /* Initially hidden */
+    position: fixed; /* Stay in place during scroll */
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #a70000; /* Accent color for the toggle */
+    cursor: pointer;
+    z-index: 1002; /* Above the sidebar */
+}
+
+.mobile-nav-toggle[aria-expanded="true"] {
+    /* Optional styles for when the menu is open */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none; /* Hide default horizontal menu */
+    }
+
+    .mobile-nav-toggle {
+        display: block; /* Show the mobile toggle */
+    }
+}
+
+@media (min-width: 769px) {
+    #primary-navigation {
+        position: static; /* Revert to static for larger screens */
+        left: auto;
+        width: auto;
+        height: auto;
+        background: none;
+        backdrop-filter: none;
+        z-index: auto;
+        flex-direction: row; /* Display links horizontally */
+        padding-top: 0;
+        transition: none;
+        overflow-y: visible;
+        align-items: center; /* Align items vertically in the header */
+    }
+
+    #primary-navigation[data-visible="true"] {
+        left: auto; /* No need to slide in on larger screens */
+    }
+
+    .nav-list {
+        display: flex; /* Show horizontal menu */
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav-list li {
+        margin-left: 1.5rem;
+        border-bottom: none;
+    }
+
+    .nav-list li a {
+        display: inline-block; /* Adjust display for horizontal layout */
+        padding: 0.5rem 0; /* Adjust padding for horizontal layout */
+    }
+
+    .mobile-nav-toggle {
+        display: none; /* Hide the mobile toggle */
+    }
+}
+
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/hero-image.jpg');
     background-size: cover;
