@@ -128,24 +128,24 @@ nav {
 }
 
 #primary-navigation {
-    position: fixed; /* Fixed position to slide from the side */
-    top: 0;
-    left: -100%; /* Initially hidden off-screen */
-    width: 80%; /* Adjust width as needed */
-    max-width: 300px;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.95); /* Dark background for the sidebar */
+    display: none; /* Initially hidden */
+    position: absolute; /* Positioned relative to the header */
+    top: 100%; /* Appear below the header */
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95); /* Dark background for the dropdown */
     backdrop-filter: blur(10px); /* Optional blur effect */
-    z-index: 1001; /* Higher than other content */
-    display: flex;
+    z-index: 1000; /* Ensure it's above other content */
     flex-direction: column;
-    padding-top: 60px; /* Adjust for header height */
-    transition: left 0.3s ease-in-out; /* Smooth slide animation */
-    overflow-y: auto; /* Enable scrolling if content overflows */
+    align-items: stretch;
+    transition: max-height 0.3s ease-in-out; /* Smooth slide-down animation */
+    overflow: hidden;
+    max-height: 0; /* Initially collapsed */
 }
 
 #primary-navigation[data-visible="true"] {
-    left: 0; /* Slide in when data-visible is true */
+    display: flex; /* Show as a flex container when visible */
+    max-height: 500px; /* Adjust as needed to accommodate all links */
 }
 
 .nav-list {
@@ -179,57 +179,71 @@ nav {
 }
 
 .mobile-nav-toggle {
-    display: none; /* Initially hidden */
-    position: fixed; /* Stay in place during scroll */
-    top: 1rem;
-    right: 1rem;
+    display: none; /* Initially hidden on larger screens */
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: #a70000; /* Accent color for the toggle */
+    color: #580000;
     cursor: pointer;
-    z-index: 1002; /* Above the sidebar */
-}
-
-.mobile-nav-toggle[aria-expanded="true"] {
-    /* Optional styles for when the menu is open */
+    z-index: 1001; /* Ensure it's above the header content */
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .nav-list {
-        display: none; /* Hide default horizontal menu */
+    .nav-list.desktop-nav { /* Hide the desktop navigation */
+        display: none;
     }
 
     .mobile-nav-toggle {
         display: block; /* Show the mobile toggle */
     }
+
+    #primary-navigation {
+        position: absolute; /* Positioned relative to the header */
+        top: 100%; /* Appear below the header */
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95); /* Dark background for the dropdown */
+        backdrop-filter: blur(10px); /* Optional blur effect */
+        z-index: 1000; /* Ensure it's above other content */
+        flex-direction: column;
+        align-items: stretch;
+        transition: max-height 0.3s ease-in-out; /* Smooth slide-down animation */
+        overflow: hidden;
+        max-height: 0; /* Initially collapsed */
+        display: none; /* Initially hidden */
+    }
+
+    #primary-navigation[data-visible="true"] {
+        display: flex; /* Show as a flex container when visible */
+        max-height: 500px; /* Adjust as needed */
+    }
 }
 
 @media (min-width: 769px) {
+    .mobile-nav-toggle {
+        display: none; /* Hide the mobile toggle on larger screens */
+    }
+
     #primary-navigation {
-        position: static; /* Revert to static for larger screens */
+        display: flex; /* Show as a horizontal menu */
+        position: static; /* No longer absolute */
+        top: auto;
         left: auto;
         width: auto;
         height: auto;
         background: none;
         backdrop-filter: none;
         z-index: auto;
-        flex-direction: row; /* Display links horizontally */
-        padding-top: 0;
+        flex-direction: row;
+        align-items: center;
         transition: none;
-        overflow-y: visible;
-        align-items: center; /* Align items vertically in the header */
-    }
-
-    #primary-navigation[data-visible="true"] {
-        left: auto; /* No need to slide in on larger screens */
+        overflow: visible;
+        max-height: none;
     }
 
     .nav-list {
-        display: flex; /* Show horizontal menu */
-        flex-direction: row;
-        align-items: center;
+        flex-direction: row; /* Display links horizontally */
     }
 
     .nav-list li {
@@ -238,12 +252,9 @@ nav {
     }
 
     .nav-list li a {
-        display: inline-block; /* Adjust display for horizontal layout */
-        padding: 0.5rem 0; /* Adjust padding for horizontal layout */
-    }
-
-    .mobile-nav-toggle {
-        display: none; /* Hide the mobile toggle */
+        display: inline-block;
+        padding: 0.5rem 0;
+        color: #580000; /* Match desktop link color */
     }
 }
 
