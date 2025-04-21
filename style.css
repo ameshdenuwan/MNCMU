@@ -127,6 +127,89 @@ nav {
     cursor: pointer;
 }
 
+/* CSS for Mobile Slide Menu */
+.mobile-nav-toggle {
+    display: none; /* Hide by default on larger screens */
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: transparent;
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    margin-left: 2rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #ccc;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    nav {
+        float: none;
+        width: 100%;
+    }
+
+    header .logo {
+        margin-left: 10px;
+    }
+
+    header .header-title {
+        font-size: 1.2rem;
+    }
+
+    .mobile-nav-toggle {
+        display: block; /* Show on mobile */
+    }
+
+    .nav-list {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Hide off-screen initially */
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 70%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    .nav-list[data-visible="true"] {
+        transform: translateX(100%); /* Slide in */
+    }
+
+    .nav-list li {
+        margin: 1rem 0;
+    }
+
+    .nav-list a {
+        font-size: 1.2rem;
+    }
+}
+
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/hero-image.jpg');
     background-size: cover;
