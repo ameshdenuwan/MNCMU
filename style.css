@@ -473,118 +473,132 @@ nav {
     }
 }
 
-#news {
-    background-color: #f0f0f0;
-    padding: 4rem 2rem;
-    text-align: center;
-}
+Okay, let's craft a more realistic news section for the Mihindu Central College website. This will include varied news items with different images and more descriptive content.
 
+Here's the updated HTML for the news section:
+
+HTML
+
+<section id="news" class="content-section">
+    <h2 class="animate__animated animate__fadeIn">MNC News & Updates</h2>
+    <div class="news-grid">
+        <div class="news-item animate__animated animate__fadeInLeft">
+            <div class="news-image">
+                <img src="images/news-science-competition-2025.jpg" alt="Science Competition Winners">
+            </div>
+            <h3>MNC Students Shine at National Science Competition</h3>
+            <p class="news-date">April 18, 2025</p>
+            <p>A team of brilliant students from Mihindu Central College secured top positions at the National Science and Innovation Competition held in Colombo. Their innovative projects in robotics and environmental science were highly commended by the judges. Congratulations to the team and their mentors!</p>
+            <a href="news-detail-science-competition.html" class="news-read-more">Read More</a>
+        </div>
+        <div class="news-item animate__animated animate__fadeInUp">
+            <div class="news-image">
+                <img src="images/news-new-library-opening.jpg" alt="New Library Opening Ceremony">
+            </div>
+            <h3>Grand Opening of the Newly Renovated College Library</h3>
+            <p class="news-date">April 15, 2025</p>
+            <p>The Mihindu Central College community celebrated the grand opening of its newly renovated library. The state-of-the-art facility boasts an expanded collection of books, digital resources, and comfortable study spaces, providing an enhanced learning environment for all students.</p>
+            <a href="news-detail-library-opening.html" class="news-read-more">Read More</a>
+        </div>
+        <div class="news-item animate__animated animate__fadeInRight">
+            <div class="news-image">
+                <img src="images/news-inter-house-drama-comp.jpg" alt="Inter-House Drama Competition">
+            </div>
+            <h3>Thrilling Performances at Inter-House Drama Competition</h3>
+            <p class="news-date">April 10, 2025</p>
+            <p>The annual Inter-House Drama Competition showcased the incredible talent and creativity of our students. Each house presented captivating performances, ranging from classic plays to original scripts. The judges had a tough time selecting the winners!</p>
+            <a href="news-detail-drama-comp.html" class="news-read-more">Read More</a>
+        </div>
+        <div class="news-item animate__animated animate__fadeInLeft">
+            <div class="news-image">
+                <img src="images/news-guest-lecture-it-professional.jpg" alt="Guest Lecture by IT Professional">
+            </div>
+            <h3>Insightful Guest Lecture by Leading IT Professional</h3>
+            <p class="news-date">April 05, 2025</p>
+            <p>Students aspiring to careers in technology had the valuable opportunity to attend a guest lecture by Mr. Asanka Silva, a renowned IT professional. He shared his experiences, insights into the industry, and advice for future tech leaders.</p>
+            <a href="news-detail-guest-lecture.html" class="news-read-more">Read More</a>
+        </div>
+    </div>
+</section>
+And here's the corresponding CSS to style this updated news section. We'll keep the core styling but ensure it accommodates multiple news items effectively.
+
+CSS
+
+/* News Section */
 .news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 2rem auto;
+    gap: 30px;
+    margin-top: 30px;
 }
 
 .news-item {
-    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
-
-.news-item:hover {
-    transform: translateY(-5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex; /* Enable flexbox for content alignment */
+    flex-direction: column; /* Stack image and text */
 }
 
 .news-image {
     width: 100%;
-    height: 200px; /* Adjust as needed */
-    overflow: hidden;
-}
-
-.news-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
 }
 
-.news-item-content {
-    padding: 1.5rem;
-    text-align: left;
+.news-item > div { /* Target the content div inside news-item */
+    padding: 15px;
+    flex-grow: 1; /* Allow content to take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out text elements */
+}
+
+.news-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
 }
 
 .news-date {
     color: #777;
     font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-}
-
-.news-item h3 {
-    color: #333;
-    margin-bottom: 0.8rem;
-    font-size: 1.2rem;
-    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .news-item p {
-    color: #555;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    color: #666;
+    margin-bottom: 15px; /* More space before the read more link */
+    line-height: 1.6; /* Improved readability */
 }
 
 .news-read-more {
     display: inline-block;
-    padding: 0.6rem 1.2rem;
-    background-color: #580000;
+    padding: 8px 15px;
+    background-color: #007bff;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-size: 0.9rem;
     transition: background-color 0.3s ease;
+    align-self: flex-start; /* Align the button to the start of the container */
 }
 
 .news-read-more:hover {
-    background-color: #400000;
+    background-color: #0056b3;
 }
 
-/* Media Queries for News Section */
-@media (max-width: 768px) {
-    #news {
-        padding: 3rem 1rem;
-    }
-
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
     .news-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        grid-template-columns: 1fr; /* Stack news items on smaller screens */
     }
-
-    .news-item-content {
-        padding: 1rem;
-    }
-
-    .news-image {
-        height: 150px;
-    }
-
-    .news-item h3 {
-        font-size: 1.1rem;
-    }
-
-    .news-item p {
-        font-size: 0.9rem;
-    }
-
-    .news-read-more {
-        font-size: 0.85rem;
-        padding: 0.5rem 1rem;
+    .news-item {
+        flex-direction: column; /* Ensure stacking on very small screens too */
     }
 }
-
 #gallery {
     padding: 4rem 0;
     background-color: #f4f4f4;
