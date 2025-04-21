@@ -78,6 +78,16 @@ window.addEventListener('load', () => {
       }, 3000); // Change image every 3 seconds
     }
   });
+
+    // JavaScript for Mobile Slide Menu
+const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+const primaryNavigation = document.querySelector('#primary-navigation');
+
+mobileNavToggle.addEventListener('click', () => {
+    const isVisible = primaryNavigation.getAttribute('data-visible') === 'true';
+    primaryNavigation.setAttribute('data-visible', !isVisible);
+    mobileNavToggle.setAttribute('aria-expanded', !isVisible);
+});
   
 
 // Easing Function (Ease Out Cubic)
