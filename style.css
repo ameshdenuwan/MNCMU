@@ -91,42 +91,6 @@ header {
     color: #580000;
 }
 
-nav {
-    display: flex;
-    align-items: center;
-}
-
-.nav-list {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-list li {
-    margin-left: 1.5rem;
-}
-
-.nav-list li a {
-    color: #580000;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-list li a:hover {
-    color: #400000;
-}
-
-.mobile-nav-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #580000;
-    cursor: pointer;
-}
-
 /* CSS for Mobile Slide Menu */
 .mobile-nav-toggle {
     display: none; /* Hide by default on larger screens */
