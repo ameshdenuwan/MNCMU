@@ -472,58 +472,6 @@ nav {
         font-size: 0.85rem;
     }
 }
-
-Okay, let's craft a more realistic news section for the Mihindu Central College website. This will include varied news items with different images and more descriptive content.
-
-Here's the updated HTML for the news section:
-
-HTML
-
-<section id="news" class="content-section">
-    <h2 class="animate__animated animate__fadeIn">MNC News & Updates</h2>
-    <div class="news-grid">
-        <div class="news-item animate__animated animate__fadeInLeft">
-            <div class="news-image">
-                <img src="images/news-science-competition-2025.jpg" alt="Science Competition Winners">
-            </div>
-            <h3>MNC Students Shine at National Science Competition</h3>
-            <p class="news-date">April 18, 2025</p>
-            <p>A team of brilliant students from Mihindu Central College secured top positions at the National Science and Innovation Competition held in Colombo. Their innovative projects in robotics and environmental science were highly commended by the judges. Congratulations to the team and their mentors!</p>
-            <a href="news-detail-science-competition.html" class="news-read-more">Read More</a>
-        </div>
-        <div class="news-item animate__animated animate__fadeInUp">
-            <div class="news-image">
-                <img src="images/news-new-library-opening.jpg" alt="New Library Opening Ceremony">
-            </div>
-            <h3>Grand Opening of the Newly Renovated College Library</h3>
-            <p class="news-date">April 15, 2025</p>
-            <p>The Mihindu Central College community celebrated the grand opening of its newly renovated library. The state-of-the-art facility boasts an expanded collection of books, digital resources, and comfortable study spaces, providing an enhanced learning environment for all students.</p>
-            <a href="news-detail-library-opening.html" class="news-read-more">Read More</a>
-        </div>
-        <div class="news-item animate__animated animate__fadeInRight">
-            <div class="news-image">
-                <img src="images/news-inter-house-drama-comp.jpg" alt="Inter-House Drama Competition">
-            </div>
-            <h3>Thrilling Performances at Inter-House Drama Competition</h3>
-            <p class="news-date">April 10, 2025</p>
-            <p>The annual Inter-House Drama Competition showcased the incredible talent and creativity of our students. Each house presented captivating performances, ranging from classic plays to original scripts. The judges had a tough time selecting the winners!</p>
-            <a href="news-detail-drama-comp.html" class="news-read-more">Read More</a>
-        </div>
-        <div class="news-item animate__animated animate__fadeInLeft">
-            <div class="news-image">
-                <img src="images/news-guest-lecture-it-professional.jpg" alt="Guest Lecture by IT Professional">
-            </div>
-            <h3>Insightful Guest Lecture by Leading IT Professional</h3>
-            <p class="news-date">April 05, 2025</p>
-            <p>Students aspiring to careers in technology had the valuable opportunity to attend a guest lecture by Mr. Asanka Silva, a renowned IT professional. He shared his experiences, insights into the industry, and advice for future tech leaders.</p>
-            <a href="news-detail-guest-lecture.html" class="news-read-more">Read More</a>
-        </div>
-    </div>
-</section>
-And here's the corresponding CSS to style this updated news section. We'll keep the core styling but ensure it accommodates multiple news items effectively.
-
-CSS
-
 /* News Section */
 .news-grid {
     display: grid;
